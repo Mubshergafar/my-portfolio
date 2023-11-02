@@ -47,15 +47,26 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>MUBSHER MOHAMEDALI</motion.h2>
+          <motion.h2 variants={textVariants}>MUBSHER MOHAMED ALI</motion.h2>
           <motion.h1 variants={textVariants}>
-            Web developer and Data scientist
+            {/* Full Stack Web Developer */}
+            Passionate Software Engineer Building Digital Dreams
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
             <motion.button variants={textVariants}>
-              See the Latest Works
+              <a href="#Portfolio">See the Latest Works</a>
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button
+              variants={textVariants}
+              style={{
+                backgroundColor: "orange",
+                color: "#FFFFDD",
+                border: "none",
+                fontWeight: "500",
+              }}
+            >
+              <a href="#Contact"> Contact Me</a>
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -71,10 +82,12 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Software Engineer Data Scientist
+        {/* Software Engineer Data Scientist */}
+        In Love with Code and Committed to Excellence
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png " alt="my photo" />
+        {/* <img src="/hero.png " alt="my photo" /> */}
+        <img src="/aa1.png " alt="my photo" />
       </div>
     </div>
   );

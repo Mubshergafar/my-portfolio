@@ -1,31 +1,68 @@
+// import { useRef } from "react";
 import "./services.scss";
-import { motion } from "framer-motion";
+import {
+  motion,
+  // useInView
+} from "framer-motion";
+
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const Services = () => {
+  // const ref = useRef();
+
+  // const isInView = useInView(ref, { margin: "-100px" });
+
   return (
-    <motion.div className="services">
-      <motion.div className="textContainer">
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+      // animate="animate"
+      whileInView="animate"
+      // ref={ref}
+      // animate={isInView && "animate"}
+    >
+      <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow <br /> and move forward
+          Passionate Software Engineer Building <br /> Digital Dreams
         </p>
         <hr />
       </motion.div>
-      <motion.div className="titleContainer">
+      <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="people" />
           <h1>
-            <b>Unique</b> Ideas
+            <motion.b whileHover={{ color: "orange" }}>Code</motion.b> Maverick
           </h1>
         </div>
         <div className="title">
           <h1>
-            <b>For Your</b> Business.
+            <motion.b whileHover={{ color: "orange" }}>Your </motion.b>
+            Next Engineer
           </h1>
-          <button>What We Do?</button>
+          <button>Press Me</button>
         </div>
       </motion.div>
-      <motion.div className="listContainer">
-        <div className="box">
+      <motion.div className="listContainer" variants={variants}>
+        <motion.div
+          className="box"
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
@@ -34,8 +71,11 @@ const Services = () => {
             explicabo maiores?
           </p>
           <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
@@ -44,8 +84,11 @@ const Services = () => {
             explicabo maiores?
           </p>
           <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
@@ -54,8 +97,11 @@ const Services = () => {
             explicabo maiores?
           </p>
           <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ backgroundColor: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
@@ -64,7 +110,7 @@ const Services = () => {
             explicabo maiores?
           </p>
           <button>Go</button>
-        </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

@@ -13,7 +13,8 @@ function Navbar() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Bash Dev
+          {/* Mubsher Mohamed Ali */}
+          BASH
         </motion.span>
         <motion.div
           className="social"
@@ -30,9 +31,7 @@ function Navbar() {
           <a href="#">
             <img src="/youtube.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
-          </a>
+          <a href="#">{/* <img src="/dribbble.png" alt="" /> */}</a>
         </motion.div>
       </div>
     </div>

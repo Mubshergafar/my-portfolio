@@ -10,7 +10,10 @@ html {
   font-family: "DM Sans", sans-serif;
 }
 body {
-  background-color: #0c0c1d;
+  // background-color: #0c0c1d;
+  background-color: #016a70;
+  // background-color: black;
+
   color: lightgray;
 }
 
@@ -21,4 +24,20 @@ a {
 section {
   height: 100vh;
   scroll-snap-align: center;
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 1366px) {
+    @content;
+  }
 }
